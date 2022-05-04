@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+body {
+  background-color: #F3F3FB;
+}
+ .Identifier{
+  height: 20vh;
+  width: 15vw;
+  background-image: linear-gradient(to right top, #341ae5, #4919e7, #5a17e9, #6916eb, #7614ed, #9901e1, #b300d6, #c700cb, #e108b3, #f0299e, #f9458d, #fb5f81);
+ margin-top: -5em;
+  margin-left: 11%;
+  border-radius: 4%;
+
+} 
+.Identifier h3{
+  color: white;
+  padding-top: 26%;
+  padding-left: 15%;
+}
+.Identifier p{
+  color: white;
+  padding-left: 15%;
+  padding-top: 2%;
+}
+
+
+.Fields{
+  height: 20vh;
+  width: 15vw;
+  margin-top: 5vh;
+  margin-left: 11%;
+  border-radius: 4%;
+  background-color: white;
+  flex-wrap: wrap;
+  padding: 2em;
+  border-radius: 4%;
+  display: flex;
+  align-items: center;
+ } 
+.tags-input-container{
+  row-gap: 2em;
+}
+.tag-item{
+  background-color: rgb(218, 216, 216);
+  display: inline-block;
+  padding: .5em .75em;
+  border-radius: 20px;
+}
+.roadmap-container{
+  height: 20vh;
+  width: 15vw;
+  background-color: white;
+  margin-top: 5vh;
+  margin-left: 11%;
+  border-radius: 4%;
+}
+.roadmap-container div{
+ margin-top: 1.7em;
+}
+  .planned-dot{
+    height: 10px;
+    width: 10px;
+    background-color: #D59840;
+    border-radius: 100%;
+    margin-top: 1.5em;
+    margin-left: 2em;
+    
+  }
+  .progress-dot{
+    height: 10px;
+    width: 10px;
+    background-color: #A73ADD;
+    border-radius: 100%;
+    /* margin-top: 1.2em; */
+    margin-left: 2em;
+   
+  }
+  .live-dot{
+    height: 10px;
+    width: 10px;
+    background-color: #89d4f7;
+    border-radius: 100%;
+    /* margin-top: 1.2em; */
+    margin-left: 2em;
+  }
+  .roadmap-container span{
+    padding-left: 1.5em;
+    /* padding-top: -2em; */
+    margin-top: -6px;
+    border-radius: 4%;
+    flex-wrap: nowrap;
+
+  } 
+  .title{
+    display: flex;
+    padding-top: 1em;
+   padding-left: 2em;
+  }
+  .title span a{
+    padding-left: 6em;
+    text-decoration: none;
+  }
+  #suggest:hover{
+    cursor: pointer;
+    border: 1px solid  #A73ADD;
+  }
+  @media (max-width:1632px){
+    .Fields{
+      width: 18vw;
+      display: block;
+
+     
+    }  
+    .Identifier{
+      width: 18vw;
+    }
+    .tags-input-container{
+      display: block;
+      flex-wrap: nowrap;
+      height: 30vh;
+      width: 28vw;
+      padding-left: 2px;
+    }
+    .roadmap-container{
+      width: 18vw !important;
+    }
+ }  
+ label{
+   display: block;
+   padding-top: 1em;
+ }
+ input{
+   background-color: #c6bff7;
+   height: 6vh;
+   width: 23vw;
+ }
+ textarea{
+   background-color: #c6bff7;
+   resize: none;
+   height: 12vh;
+   width: 23vw;
+ }
+   select{
+     width: 23vw;
+     height: 6vh;
+   }
+   form h1{
+     padding-top: 1.5em;
+   }
+  
