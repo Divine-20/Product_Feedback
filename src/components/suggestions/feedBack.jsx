@@ -25,7 +25,7 @@ function FeedBack(props) {
        
         <div className='tags-input-container ml-24 mt-8'>
                 {tags.map((tag, index) => (
-                    <div className='tag-item' onClick={()=> navigate('/tag')} key={index}>
+                    <div className='tag-item' onClick={()=> navigate('./tag')} key={index}>
                           <span className="text">{tag}</span>
                           
                     </div>

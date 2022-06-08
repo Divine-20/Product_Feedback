@@ -140,19 +140,33 @@ body {
  input{
    background-color: #c6bff7;
    height: 6vh;
+   padding-left: 10px;
    width: 23vw;
  }
  textarea{
-   background-color: #c6bff7;
+   background-color: #e8e5fd;
    resize: none;
    height: 12vh;
+   padding-left: 10px;
+   padding-top: 10px;
    width: 23vw;
  }
    select{
+     padding-left: 10px;
      width: 23vw;
      height: 6vh;
    }
    form h1{
      padding-top: 1.5em;
    }
-  
+   #feedback{
+    font-family: 'Great Vibes', cursive;
+    font-size: 5cm;
+    padding-top: 1em;
+    text-align: center;
+
+   }
+#signupp h1{
+  font-family: 'Great Vibes', cursive;
+  font-weight: bolder;
+}

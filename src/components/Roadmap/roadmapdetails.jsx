@@ -12,7 +12,7 @@ function Roadmapdetails(props) {
   return (
     <div className=''>
         <div className='h-20 w-[54vw] bg-blue-900 flex ml-auto mr-auto mt-10 rounded-lg pt-4'>
-           <i className='text-white flex pl-5 pt-1'><FaCaretLeft /></i><span className='text-white'>Go Back</span>
+           <i className='text-white flex pl-5 pt-1 hover:underline'><FaCaretLeft /></i><span className='text-white'>Go Back</span>
       <h1 className='text-white pl-12 text-3xl'>Roadmap</h1>
            
 

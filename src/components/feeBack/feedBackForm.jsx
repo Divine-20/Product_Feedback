@@ -3,8 +3,8 @@ import { FaCaretLeft, FaPlus} from 'react-icons/fa'
 function FeedBackForm() {
   return (
     <div className=''>
-      <i className='text-blue-500 flex justify-center pt-40 '><FaCaretLeft />Go back</i>
-      <div className='w-16 h-16 rounded-full text-white bg-gradient-to-r from-violet-500 to-fuchsia-500 ml-auto mr-auto pt-4 pl-4 text-3xl'>
+      <i className='text-blue-500 flex justify-center pt-40 hover:underline '><FaCaretLeft />Go back</i>
+      <div className='w-16 h-16 rounded-full text-white bg-gradient-to-r from-violet-500 to-fuchsia-500 absolute left-[36%] top-[17%] pt-4  pl-4 text-3xl'>
         <i className=''><FaPlus /></i>
       </div>
    <div className=' w-[30vw] h-[70vh] ml-auto mr-auto bg-white pl-16 pt-8'>
