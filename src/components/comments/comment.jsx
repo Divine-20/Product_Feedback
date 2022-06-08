@@ -3,6 +3,7 @@ import FeedBack from '../suggestions/feedBack';
 import  image from '../Images/image.png'
 import { FaCaretLeft} from 'react-icons/fa'
 import {  useNavigate} from 'react-router-dom'
+import { comment } from 'postcss';
 function Comment() {
   const feedbacks = [{
     imageStatus: "Preview images not loading",
@@ -12,8 +13,8 @@ function Comment() {
   },]
   const navigate = useNavigate();
 
-  const[comment, setComment] = useState(false);
- 
+  const[newcomment, setComment] = useState(false);
+  
   
   return (
   
@@ -44,7 +45,7 @@ function Comment() {
                <p className='pl-14'>@alicemugwaneza</p>   
                <p className='pl-14 pt-6  pb-8'>Much easier to get answers from devs who can relate, since they've either finished <br /> the challenge  
                themselves or are in the middle of it.</p>  
-               <form action=" " className=''>
+               <form action=" " value={newcomment} className={` ${newcomment ? 'block' : 'hidden'}`}>
                  <div className='flex ' >
              <textarea placeholder='Type your comment here' className='w-[35vw] rounded-lg mt-4 pt-4 pl-4'></textarea>
              <button className='h-14 w-40 bg-purple-600 text-white ml-6  rounded-lg mt-4 ' >Post reply</button>
