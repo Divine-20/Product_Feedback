@@ -20,8 +20,7 @@ function App() {
           <Route path='/' exact element={<Home />}></Route>
           <Route path='/signup' element={<Signup />}></Route>
           <Route path='/login' element={<Login />}></Route>
-          <Route path='/signup' element={<Signup />}></Route>
-          <Route path='/roadmapLayout' element={<RoadmapLayout />}></Route>
+          {/* <Route path='/signup' element={<Signup />}></Route> */}
           <Route path='/roadmapLayout' element={<RoadmapLayout />}></Route>
           <Route path='/view' element={<Roadmapdetails />}></Route>
           <Route path='/Addfeedback' element={<FeedBackinfo />}></Route>
