@@ -4,7 +4,8 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Roadmapdetails from './components/Roadmap/roadmapdetails';
 import FeedBackinfo from './components/feeBack/feedBankinfo';
 import Home from './components/Form/home';
-import Comment from './components/comments/comment';
+// import Comment from './components/comments/comment';
+import CommentContent from './components/comments/commentContent';
 import SuggestionContent from './components/suggestions/suggestionContent';
 import Signup from './components/Form/signup';
 import Login from './components/Form/login';
@@ -24,7 +25,7 @@ function App() {
           <Route path='/roadmapLayout' element={<RoadmapLayout />}></Route>
           <Route path='/view' element={<Roadmapdetails />}></Route>
           <Route path='/Addfeedback' element={<FeedBackinfo />}></Route>
-          <Route path='/roadmapLayout/tag' element={<Comment />}></Route>
+          <Route path='/roadmapLayout/tag' element={<CommentContent />}></Route>
           <Route path='/Edit-feedback' element={<FeedbackEdit />}></Route>
           
         </Routes>
