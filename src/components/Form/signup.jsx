@@ -115,9 +115,9 @@ function Signup() {
     if(password?.length < 6){
         errors.password="The password must have more than 6 characters"; 
     }
-    // if(password !== cpassword){
-    //     errors.cpassword = "The password entered is incorrect";
-    // }
+    if(password !== cpassword){
+        errors.cpassword = "The password entered is incorrect";
+    }
    
 
     // password.length < 6 ? errors.password = "The password must have more than 6 characteres" : errors.password = "Password okay";
