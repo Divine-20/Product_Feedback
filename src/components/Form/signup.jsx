@@ -3,12 +3,12 @@ import { Link ,useNavigate} from 'react-router-dom'
 import { useState } from 'react'
 
 function Signup() {
-  const [fname, setfname] = useState();
-  const [lname, setlname] = useState();
-  const [email, setemail] = useState();
-  const [username, setusername] = useState();
-  const [password, setPassword] = useState();
-  const [cpassword, setcpassword] = useState();
+  const [fname, setfname] = useState('');
+  const [lname, setlname] = useState('');
+  const [email, setemail] = useState('');
+  const [username, setusername] = useState('');
+  const [password, setPassword] = useState('');
+  const [cpassword, setcpassword] = useState('');
   const navigate = useNavigate("")
   const [errors, setErrors] = useState({})
   const [dataIsCorrect, setDataIsCorrect] = useState(false);
@@ -108,17 +108,16 @@ function Signup() {
     if(!/\S+@\S+\.\S+/.test(email)){
         errors.email="Invalid email."
     }
-    // console.log(email)
-    // email.includes("@") ? errors.email = "Email Perfect " : errors.email = "Email not valid";
+  
     if (!email) {
       errors.email = "email is required";
     }
     if(password?.length < 6){
         errors.password="The password must have more than 6 characters"; 
     }
-    if(password !== cpassword){
-        errors.cpassword = "The password entered is incorrect";
-    }
+    // if(password !== cpassword){
+    //     errors.cpassword = "The password entered is incorrect";
+    // }
    
 
     // password.length < 6 ? errors.password = "The password must have more than 6 characteres" : errors.password = "Password okay";
