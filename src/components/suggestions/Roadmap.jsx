@@ -7,7 +7,7 @@ function Roadmap() {
     <div className='roadmap-container'>
       <div className='title'>
 
-        <h3 className='heading3'>Roadmap</h3><span><a href='/view'>view</a></span>
+        <h3 className='heading3'>Roadmap</h3><span><a href='/view' className=' text-black hover:text-[purple] hover:underline'>view</a></span>
      
       </div>
       <div className='list'>

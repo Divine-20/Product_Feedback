@@ -1,12 +1,40 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { FaEdit ,FaCaretLeft} from 'react-icons/fa'
-import { useState } from 'react';
+// import { useState } from 'react';
  
 function FeedbackEdit() {
+     
+  const[content, setContent] = useState({ 
+      headline:"",
+      category:"",
+      status:"",
+      detail:"",
+   }) 
+  
+   const getContent = ({ currentTarget:input }) =>{
+     setContent({...content, [input.name]: input.value});
+   }
+   const handleSubmit = async (e) =>{
+     e.preventDefault();
 
-  const[headline,setHeadline]  = useState('');
-  const [category,setCategory] =useState('');
-  const  [status,setStatus] = useState('');
+     const editFeedback = async()=>{
+       await fetch("http://localhost:4000/Api/feedback/addFeedback/:id", {
+         method : "PUT",
+         headers: {
+           "Content-Type": "application/json"
+         },
+         body:JSON.stringify(content)
+       }).then((response) =>{
+          return response.json();
+       }).then((response) =>{
+           console.log(response);
+       }).catch((error) =>{
+           console.log(error);
+       })
+     }
+   };
+  
+  
   return (
     <div>
        <i className='text-blue-500 flex justify-center pt-32 hover:underline '><FaCaretLeft />Go back</i>
@@ -14,15 +42,15 @@ function FeedbackEdit() {
         <i className=''><FaEdit /></i>
       </div>
   <div className=' w-[30vw] h-[82vh] ml-auto mr-auto bg-white pl-16 pt-8'>
-    <form action="">
+    <form action="" onSubmit={handleSubmit}>
      <h1>Edit 'Add tags for solutions'</h1>
      <p>FeedbackTitle</p>
      <label>Add a short,descriptive headline</label>
-         <input type="text" placeholder='Add tags for solutions' />
+         <input type="text" placeholder='Add tags for solutions' value={content.headline} onChange={getContent} />
 
          <p>Category</p>
          <label>Choose a category for your feedback</label>
-         <select name='category'>
+         <select name='category' value={content.category} onChange={getContent}>
        <option>Feature</option>
        <option>UI</option>
        <option>UX</option>
@@ -32,7 +60,7 @@ function FeedbackEdit() {
 
        <p>Update status</p>
          <label>Change feedback status</label>
-       <select name='status'>
+       <select name='status' value={content.status} onChange={getContent}>
        <option>Suggestion</option>
        <option>Planned</option>
        <option>In-progress</option>
@@ -41,7 +69,7 @@ function FeedbackEdit() {
 
        <h1>Feedback Detail</h1>
        <label className='block'>Include any specific comments on what should be improved,added,etc.</label>
-       <textarea></textarea>
+       <textarea value={content.detail} onChange={getContent}></textarea>
         <button className='h-12 w-28 bg-red-600 rounded-lg  mt-8 text-white'>Delete</button>
          <button className='h-12 w-28 bg-blue-900 rounded-lg ml-12 mt-8 text-white'>Cancel</button>
        <button className='h-12 w-40 bg-purple-600 rounded-lg ml-4 mt-8 text-white'>Save changes</button>

@@ -166,6 +166,17 @@ body {
     text-align: center;
 
    }
+   /* select option{
+     height: 6vh;
+     width: 20wv;
+     border-bottom:1px solid gray ;
+
+   } */
+   input[type="select"]{
+    height: 6vh;
+    width: 20wv;
+    border-bottom:1px solid gray ;
+   }
 #signupp h1{
   font-family: 'Great Vibes', cursive;
   font-weight: bolder;

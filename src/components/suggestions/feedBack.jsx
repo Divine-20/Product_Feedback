@@ -9,12 +9,17 @@ function FeedBack(props) {
         'Feature', "something"
     ])
     const navigate = useNavigate();
+    const numOfUpvotes = ()=>{
+      let count = 0;
+      const numUpvotes = count + 1;
+    }
+ 
   return (
     <div className='rounded-lg bg-white float-right h-60 w-[50vw] mt-10 mr-96 ' id='suggest'>
         <div className='flex pl-5 pt-4'>
         <div className=' bg-slate-400 w-10 h-16 rounded-lg  mt-2 pl-3 pt-3'>
           <i><FaCaretUp /></i>
-          <p className=' pl-1'>{props.numOfUpvotes}</p>
+          <p className=' pl-1'>{props.numOfUpvotes} </p>
           
           </div>
         <h2 className=' pl-10 pt-7'>{props.imageStatus}</h2>

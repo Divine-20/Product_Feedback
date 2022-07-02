@@ -5,14 +5,14 @@ import FeedBack from './feedBack'
 function SuggestionContent() {
   const feedbacks = [{
     imageStatus: "Preview images not loading",
-    numOfComments: 0,
-    numOfUpvotes: 3,
+    numOfComments: 2,
+    numOfUpvotes: 4,
     theComment: "Easier to search for solutions based on specific stack"
   },
   {
     imageStatus: "Preview images are actually loading",
     numOfComments: 4,
-    numOfUpvotes: 9,
+    numOfUpvotes: 6,
     theComment: "This is just another comment that is meaningless"
 },{
   imageStatus: "No output noticed",
@@ -20,6 +20,8 @@ function SuggestionContent() {
     numOfUpvotes: 5,
     theComment: "This is testing whether it works out"}
 ]
+
+
   return (
     <div>
         <Suggestion />
@@ -31,6 +33,8 @@ function SuggestionContent() {
           theComment={feedback.theComment}/>
           )
         })}
+
+        
     </div>
   )
 }

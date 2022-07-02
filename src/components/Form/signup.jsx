@@ -22,7 +22,6 @@ function Signup() {
     email: ""
   })
 
-
   const handlefnameChange = e => {
     setfname(e.target.value);
 
@@ -54,19 +53,34 @@ function Signup() {
       email: email
     })
     // setDataIsCorrect(true);
+    const register = async()=>{
+      await fetch("http://localhost:4000/Api/v1/auth/register",{
+         method:"POST",
+         // mode: "no-cors",
+         headers: {
+           "Content-Type":"application/json"
+         },
+         body:JSON.stringify(data)
+       }).then((response)=>{
+             return response.json()
+       }).then((data)=>{
+         console.log(data)
+       }).catch((error)=>{
+         console.log(error)
+       })
+     
+     }
+       register();   
+    setErrors(Validation(fname,lname,username, password, email, cpassword));
     setfname('');
     setlname('');
     setemail('');
     setusername('');
     setPassword('');
     setcpassword('');
-    setErrors(Validation(fname,lname,username, password, email, cpassword));
     
-    if(dataIsCorrect){
-      navigate('/roadmapLayout');    }else{
-      navigate('/signup');
-    }
-    
+   
+  
 
   }
   const Validation = (fname, lname, username, password, email, cpassword) => {
@@ -118,14 +132,9 @@ function Signup() {
     return errors;
 
   }
- 
-  
 
-   
   
-    
-   
-  return (
+return (
     <div>
       <div className='h-[100vh] w-[30vw] bg-[white] ml-auto mr-auto mt-20' id='signupp'>
         <h1 className='text-4xl  text-center pt-4'>Welcome to Feedback mentor</h1>
