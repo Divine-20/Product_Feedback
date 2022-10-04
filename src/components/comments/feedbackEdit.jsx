@@ -26,12 +26,14 @@ function FeedbackEdit() {
          body:JSON.stringify(content)
        }).then((response) =>{
           return response.json();
+          
        }).then((response) =>{
            console.log(response);
        }).catch((error) =>{
            console.log(error);
        })
      }
+     return editFeedback.json()
    };
   
   
@@ -41,8 +43,8 @@ function FeedbackEdit() {
       <div className='w-16 h-16 rounded-full text-white bg-gradient-to-r from-violet-500 to-fuchsia-500 absolute left-[36%] top-[13%] pt-4  pl-4 text-3xl'>
         <i className=''><FaEdit /></i>
       </div>
-  <div className=' w-[30vw] h-[82vh] ml-auto mr-auto bg-white pl-16 pt-8'>
-    <form action="" onSubmit={handleSubmit}>
+  <div className=' w-[30vw] h-auto mb-8 ml-auto mr-auto bg-white pl-16 pt-8'>
+    <form action="" onSubmit={handleSubmit} className="pb-6">
      <h1>Edit 'Add tags for solutions'</h1>
      <p>FeedbackTitle</p>
      <label>Add a short,descriptive headline</label>
@@ -72,7 +74,7 @@ function FeedbackEdit() {
        <textarea value={content.detail} onChange={getContent}></textarea>
         <button className='h-12 w-28 bg-red-600 rounded-lg  mt-8 text-white'>Delete</button>
          <button className='h-12 w-28 bg-blue-900 rounded-lg ml-12 mt-8 text-white'>Cancel</button>
-       <button className='h-12 w-40 bg-purple-600 rounded-lg ml-4 mt-8 text-white'>Save changes</button>
+       <button className='h-12 w-32 bg-purple-600 rounded-lg ml-4 mt-8 text-white'>Save changes</button>
          </form>
       </div>
     </div>

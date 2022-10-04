@@ -8,7 +8,7 @@ function Fields() {
     return (
         <div className='Fields'>
            
-            <div className='tags-input-container'>
+            <div className='tags-input-conclassNametainer'>
                 {tags.map((tag, index) => (
                     <div className='tag-item' key={index}>
                           <span className="text">{tag}</span>
