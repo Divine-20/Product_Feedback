@@ -19,7 +19,7 @@ function Comment(props) {
   const [response, setResponse] = useState("");
   const {comments} = props;
    
- 
+ console.log(Reply);
   
   return (
   
@@ -58,8 +58,13 @@ function Comment(props) {
                  <div className='flex ' >
              <textarea placeholder='Type your comment here' className='w-[35vw] rounded-lg mt-4 pt-4 pl-4' onChange={(e)=>{setComment(e.target.value);console.log(e.target.value)}}></textarea>
              <button className='h-12 w-28 bg-purple-600 text-white ml-6  rounded-lg mt-4 ' onClick={()=>{server.post("/Api/feedback/addFeedback",{title:"divine",category:"one",Detail:"help",Comment:comment,Reply:"hello"})}}>Post reply</button>
+           
              </div>
+             
+             
              </form> 
+            
+
              <div className='h-[2px] w-[38vw] bg-slate-400 mt-2 mb-8'></div>    
                      
              </div>

@@ -42,10 +42,10 @@ function FeedBackForm() {
       <div className='w-16 h-16 rounded-full text-white bg-gradient-to-r from-violet-500 to-fuchsia-500 absolute left-[36%] top-[17%] pt-4  pl-4 text-3xl'>
         <i className=''><FaPlus /></i>
       </div>
-   <div className=' w-[30vw] h-[70vh] ml-auto mr-auto bg-white pl-16 pt-8'>
+   <div className=' w-[30vw] h-auto ml-auto mr-auto bg-white pl-16 pt-8'>
    
 
-     <form onSubmit={handleSubmit}>
+     <form onSubmit={handleSubmit} className="pb-6">
         <h1>Create New Feedback</h1>
         <label className=''>Add a short, descriptive headline</label>
         <input type='text' name='headline' value={values.headline} onChange={collectData}/>
@@ -63,7 +63,7 @@ function FeedBackForm() {
        <h1>Feedback Detail</h1>
        <label className='block'>Include any specific comments on what should be improved,added,etc.</label>
        <textarea value={values.detail} onChange={collectData} name='detail'></textarea>
-       <button className='h-12 w-28 bg-blue-900 rounded-lg ml-36 mt-8 text-white' type='submit'>Cancel</button>
+       <button className='h-12 w-28 bg-blue-900 rounded-lg  mt-8 text-white' type='submit'>Cancel</button>
        <button className='h-12 w-40 bg-purple-600 rounded-lg ml-4 mt-8 text-white' type='submit'>Add Feedback</button>
          </form>
    </div>

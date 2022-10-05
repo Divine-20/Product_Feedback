@@ -5,19 +5,20 @@ import { FaEdit ,FaCaretLeft} from 'react-icons/fa'
 function FeedbackEdit() {
      
   const[content, setContent] = useState({ 
-      headline:"",
+      headline:"HEAD",
       category:"",
       status:"",
       detail:"",
    }) 
   
    const getContent = ({ currentTarget:input }) =>{
+    
      setContent({...content, [input.name]: input.value});
    }
-   const handleSubmit = async (e) =>{
+      const handleSubmit = async (e) =>{
      e.preventDefault();
     
-
+    
      const editFeedback = async()=>{
        await fetch("http://localhost:4000/Api/feedback/addFeedback/:id", {
          method : "PUT",
@@ -49,7 +50,7 @@ function FeedbackEdit() {
      <h1>Edit 'Add tags for solutions'</h1>
      <p>FeedbackTitle</p>
      <label>Add a short,descriptive headline</label>
-         <input type="text" placeholder='Add tags for solutions' value={content.headline} onChange={getContent} />
+         <input type="text" placeholder='Add tags for solutions' name='headline' value={content.headline} onChange={getContent} />
 
          <p>Category</p>
          <label>Choose a category for your feedback</label>
@@ -63,7 +64,7 @@ function FeedbackEdit() {
 
        <p>Update status</p>
          <label>Change feedback status</label>
-       <select name='status' value={content.status} onChange={getContent}>
+       <select name='status' value={content.status}>
        <option>Suggestion</option>
        <option>Planned</option>
        <option>In-progress</option>
@@ -72,7 +73,7 @@ function FeedbackEdit() {
 
        <h1>Feedback Detail</h1>
        <label className='block'>Include any specific comments on what should be improved,added,etc.</label>
-       <textarea value={content.detail} onChange={getContent}></textarea>
+       <textarea onChange={getContent} value={content.detail } type="text" name='detail'></textarea>
         <button className='h-12 w-28 bg-red-600 rounded-lg  mt-8 text-white'>Delete</button>
          <button className='h-12 w-28 bg-blue-900 rounded-lg ml-12 mt-8 text-white'>Cancel</button>
        <button className='h-12 w-32 bg-purple-600 rounded-lg ml-4 mt-8 text-white'>Save changes</button>
