@@ -56,12 +56,8 @@ function Login() {
   if(password?.length < 6){
     errors.password="The password must have more than 6 characters"; 
 }
-   
-
   }
-  
-
-  return (
+return (
     <div>
     <div className='h-[65vh] w-[30vw] bg-[white] ml-auto mr-auto mt-20' id='signupp'>
       <h1 className='text-4xl  text-center pt-10'>Welcome to Feedback mentor</h1>
