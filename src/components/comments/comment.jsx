@@ -19,7 +19,7 @@ function Comment(props) {
   const [response, setResponse] = useState("");
   const {comments} = props;
    
- console.log(Reply);
+ 
   
   return (
   
