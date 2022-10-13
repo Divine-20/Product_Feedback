@@ -17,8 +17,6 @@ function FeedbackEdit() {
    }
       const handleSubmit = async (e) =>{
      e.preventDefault();
-    
-    
      const editFeedback = async()=>{
        await fetch("http://localhost:4000/Api/feedback/addFeedback/:id", {
          method : "PUT",
@@ -37,8 +35,6 @@ function FeedbackEdit() {
      }
      return editFeedback.json()
    };
-  
-  
   return (
     <div>
        <i className='text-blue-500 flex justify-center pt-32 hover:underline '><FaCaretLeft />Go back</i>
